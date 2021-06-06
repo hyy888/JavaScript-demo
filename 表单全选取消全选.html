@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        thead {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 业务需求：
+    1、点击上面全选复选框，下面所有的复选框都选中（全选）
+    2、再次点击全选复选框，下面所有的复选框都不中选（取消全选）
+    3、如果下面复选框全部选中，上面全选按钮就自动选中
+    4、如果下面复选框有一个没有选中，上面全选按钮就不选中
+    5、所有复选框一开始默认都没选中状态
+     -->
+    <table border="1">
+        <thead>
+            <tr>
+                <td><input type="checkbox" id="qx"></td>
+                <td>商品</td>
+                <td>价格</td>
+            </tr>
+        </thead>
+        <tbody id="num1">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPhone8</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPad Pro</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPad Air</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Apple Watch</td>
+                <td>2000</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var qx = document.getElementById('qx');
+        var num1 = document.getElementById('num1').getElementsByTagName('input');
+        qx.onclick = function () {
+            //this.checked可以得到当前复选框的状态
+            for (var i = 0; i < num1.length; i++) {
+                num1[i].checked = this.checked;
+            }
+        }
+        //为每一个复选框绑定事件
+        for (var i = 0; i < num1.length; i++) {
+            num1[i].onclick = function() {
+                var flag = true;
+                for (var i = 0; i < num1.length; i++) {
+                    if (!num1[i].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                qx.checked = flag;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
