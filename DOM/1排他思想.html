@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            margin: 300px auto;
+        }
+        .but {
+            background-color: skyblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <button>按钮</button>
+        <button>按钮</button>
+        <button>按钮</button>
+        <button>按钮</button>
+        <button>按钮</button>
+        <button>按钮</button>
+    </div>
+    <script>
+        // 考虑兼容问题
+        var btns = document.getElementsByTagName('button');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function() {
+                // 循环清除之前点击后留下的样式
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].style.backgroundColor = '';
+            }
+            // btns得到的是伪数组 里面的每一个元素 btns[i]
+                this.style.backgroundColor = 'skyblue';
+            }       
+        }
+    </script>
+</body>
+
+</html>

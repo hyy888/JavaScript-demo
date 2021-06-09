@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Shuru(num1, num2) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.jia = function (num1,num2) {
+                return re = num1 + num2;
+            }
+            this.jian = function (num1,num2) {
+                return re = num1 - num2;
+            }
+            this.cheng = function (num1,num2) {
+                return re = num1 * num2;
+            }
+            this.chu = function (num1,num2) {
+                return re = num1 / num2;
+            }
+        }
+        var flag = true;
+        while (flag) {
+            var cc = prompt('1、加法运算:\n2、减法运算:\n3、乘法运算:\n4、除法运算:');
+            if (cc == 1 || cc == 2 || cc == 3 || cc == 4) {
+                var shuru = new Shuru(parseInt(prompt('第一个数字')), parseInt(prompt('第二个数字')));
+                var re = 0;
+                switch (parseInt(cc)) {
+                    case 1:
+                        alert(shuru.jia(shuru.num1, shuru.num2));
+                        break;
+                    case 2:
+                        alert(shuru.jian(shuru.num1, shuru.num2));
+                        break;
+                    case 3:
+                        alert(shuru.cheng(shuru.num1, shuru.num2));
+                        break;
+                    case 4:
+                        alert(shuru.chu(shuru.num1, shuru.num2));
+                        break;
+                        default: alert('出错');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

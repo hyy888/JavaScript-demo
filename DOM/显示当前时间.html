@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button,div,p {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮</button>
+    <div>某个时间</div>
+    <p></p>
+
+    <script>
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.onclick = function() {
+            div.innerText = getDate();
+        }
+
+        var p = document.querySelector('p');
+        p.innerText = getDate();
+
+        function getDate() {
+            var obj = new Date();
+        var num1 = obj.getFullYear();
+        var num2 = obj.getMonth() + 1;
+        var num3 = obj.getDate();
+        var num4 = obj.getDay();
+        var num5 = obj.getHours();
+        var num6 = obj.getMinutes();
+        var num7 = obj.getSeconds();
+        var arr = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六']
+        return num1 + "年" + num2 + "月" + num3 + "日"+ arr[num4] + num5 + "时" + num6 + "分" + num7 + "秒";
+        }
+    </script>
+</body>
+</html>

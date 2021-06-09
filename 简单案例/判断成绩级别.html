@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt('请输入分数');
+        if (num >= 90 ) {
+            alert('等级为A');
+        }else if (num >= 80) {
+            alert('等级为B');
+        }else if (num >= 70) {
+            alert('等级为C');
+        }else if (num >= 60) {
+            alert('等级为D');
+        }else if (num < 60) {/* 这里可以不用if判断了，直接else就行 */
+            alert('等级为E')
+        }
+    </script>
+</head>
+<body>
+    <!-- 案例： 判断成绩级别
+
+要求：接收用户输入的分数，根据分数输出对应的等级字母 A、B、C、D、E。
+其中：
+1、90分(含)以上 ，输出：A
+2、80分(含)~ 90 分(不含)，输出：B
+3、 70分(含)~ 80 分(不含)，输出：C
+4、60分(含)~ 70 分(不含)，输出：D
+5、60分(不含) 以下，输出： E -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function obj(name,type,blood,attack) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function() {
+                console.log('攻击：'+ attack);
+            }
+            this.sayHi = function() {
+                alert('名字：' + this.name + '类型：' + this.type + '血量：' + this.blood + '攻击：' + attack);
+            }
+        }
+        var lian = new obj('廉颇','力量型','500血量','近战');
+        console.log(lian.name);
+        console.log(lian.type);
+        console.log(lian.blood);
+        lian.attack();
+        lian.sayHi();
+        var hou = new obj('后羿','射手型','100血量','远程');
+        console.log(hou.name);
+        console.log(hou.type);
+        console.log(hou.blood);
+        hou.attack();
+        hou.sayHi();
+    </script>
+</head>
+<body>
+ <!-- 练习： 请按照要求创建对象
+
+利用构造函数创建两个英雄对象。函数中的公共部分包括：姓名属性(name)，类型属性（type），血量属性（blood）和攻击方式（attack）。
+英雄对象的信息如下 ： 
+ 廉颇   力量型    500血量    攻击 ：近战 
+ 后羿   射手型    100血量    攻击： 远程 -->
+</body>
+</html>

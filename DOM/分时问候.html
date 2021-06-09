@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div,
+    img {
+        width: 300px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div id="time">上午好</div>
+    <img src="images/s.gif" alt="">
+    <script>
+        var time = document.getElementById('time');
+        var img = document.querySelector('img');
+
+
+        var obj = new Date();
+        var h = obj.getHours();
+        if (h < 12) {
+            time.innerText = '上午好';
+            img.src = 'images/s.gif';
+        } else if (h < 18) {
+            time.innerText = '下午好';
+            img.src = 'images/x.gif';
+        }else if ( h < 21) {
+            time.innerText = '晚午好';
+            img.src = 'images/w.gif';
+        }
+    </script>
+
+
+
+
+
+
+
+    <!-- 案例： 分时显示不同图片,显示不同问候语
+
+根据不同时间，页面显示不同图片，同时显示不同的问候语。
+如果上午时间打开页面，显示上午好，显示上午的图片。
+如果下午时间打开页面，显示下午好，显示下午的图片。
+如果晚上时间打开页面，显示晚上好，显示晚上的图片。 -->
+</body>
+
+</html>

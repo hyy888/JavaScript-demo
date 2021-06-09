@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt('请输入班级人数');
+        var num1 = 0;//总成绩
+        var num2 = 0;//平均成绩
+        for (var i = 1;i <= num; i++) {
+            var num3 = prompt('输入第' + i + '位学生成绩');
+            num1 = num3 + parseFloat(num3);  
+        }
+        num2 = num1 / num; 
+        alert(num1);
+        alert(num2);
+    </script>
+</head>
+<body>
+    <!-- 求学生成绩
+    要求用户输入班级人数，之后依次输入每个学生的成绩，最后打印出该班级总的成绩以及平均成绩。 -->
+</body>
+</html>

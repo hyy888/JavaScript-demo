@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cc {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="cc">隐藏内容</div>
+    <button>点击</button>
+    <script>
+        var bt = document.querySelector('button');
+        var div = document.querySelector('div');
+        bt.onclick = function() {
+            div.style.display = 'block';
+        }
+
+    </script> -->
+
+
+    <button id="bt">点击</button>
+    <div id="cc">隐藏内容</div>
+    <script>
+        // 利用函数同时获取全部ID元素对象
+        function $(id) {
+            return document.getElementById(id);
+        }
+        // 利用函数构造改变元素属性的方法
+        function show() {
+            $('cc').style.display = 'block';
+        }
+        // 设置点击事件
+        $('bt').onclick = show;
+    </script>
+</body>
+
+</html>
