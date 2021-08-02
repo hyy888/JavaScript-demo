@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* let test = Math.floor(Math.random() * 10 + 1);
+        console.log(test);
+        if(test > 5){
+            console.log('good');
+        }else{
+            console.log('no');
+        } */
+        let str = 'Hello world';
+        // substring和slice与substr的区别在于第二个数值的意义，substring和slice第二个数值表示结束位置，而substr的第二个数值表示字符串长度
+        console.log(str.substring(6));        
+        console.log(str.substring(6,8));        
+        console.log(str.substr(6));        
+        console.log(str.substr(6,4));        
+        console.log(str.slice(6));        
+        console.log(str.slice(6,8));
+        
+        console.log('---------------------------------------------------');
+        
+        // substring中全部负数数值都会转化成零，substr中第一个负数数值为字符串总长度减去该值，第二个转换成零，slice中所有负数都转换成字符串长度减去该值。
+        console.log(str.substring(-5));        
+        console.log(str.substring(-5,4));        
+        console.log(str.substring(0,4));        
+        console.log(str.substr(-4));        
+        console.log(str.substr(-4,-4));        
+        console.log(str.slice(-4));        
+        console.log(str.slice(-4,-2));
+
+        console.log('---------------------------------------------------');
+        
+        // indexof用于在字符串中定位子字符串
+        console.log(str.indexOf("o"));
+        console.log(str.lastIndexOf("o"));//严格遵循驼峰命名法
+
+        console.log('---------------------------------------------------');
+
+        // startsWith()检查开始于索引0的匹配项，endsWith()检查开始于索引最后的匹配项，includes()检查整个字符串
+        console.log(str.startsWith("Hello"));
+        console.log(str.startsWith("ello"));
+        console.log(str.endsWith("world"));
+        console.log(str.endsWith("worl"));
+        console.log(str.includes("wo"));
+
+        console.log('---------------------------------------------------');
+        
+        // trim可以删除字符串前后空格
+        let str1 = ' Hello world ';
+        console.log(str1);
+        console.log(str1.trim());
+        
+        console.log('---------------------------------------------------');
+
+        // repeat可以复制字符串
+        console.log(str1.repeat(3));
+
+        console.log('---------------------------------------------------');
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div data-index="11" data-list-name='andy'></div>
+    <script>
+        var div = document.querySelector('div');
+        //getAttribute兼容性更好，常用
+        console.log(div.getAttribute('data-index'));
+        console.log(div.getAttribute('data-list-name'));
+        
+        //dataset只能获取data开头的，ie11才开始支持
+        console.log(div.dataset.index);
+        console.log(div.dataset['index']);
+        console.log(div.dataset.listName);
+        console.log(div.dataset['listName']);
+    </script>
+</body>
+</html>
