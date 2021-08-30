@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Snapshots</h1>
+  <ul>
+    <li>
+      <!-- 添加return false是为了防止事件函数运行的同时运行了默认行为 -->
+      <a href="images/1.jpg" onclick="showPic(this);return false;" title="A fireworks display">fireworks</a>
+    </li>
+    <li>
+      <a href="images/2.jpg" onclick="showPic(this);return false;" title="A cup of black coffee">Coffee</a>
+    </li>
+    <li>
+      <a href="images/3.jpg" onclick="showPic(this);return false;" title="A red,red rose">Rose</a>
+    </li>
+    <li>
+      <a href="images/4.jpg" onclick="showPic(this);return false;" title="The famous clock">Big Ben</a>
+    </li>
+  </ul>
+    <img id="placeholder" src="images/s.gif" alt="my image gallery">
+    <p id="description">Choose an images.</p>
+    <script type="text/javascript" src="scripts/showPic.js"></script>
+</body>
+</html>
