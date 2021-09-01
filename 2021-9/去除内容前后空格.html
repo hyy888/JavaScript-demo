@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = prompt("用户名");
+    //去除掉字符串中的空格
+    //去除空格就是使用""来替换空格
+    str = str.replace(/^\s*|\s*$/g,"");
+    //+号代表至少一个，*号代表0个或多个
+    // str = str.replace(/^\s+|\s+$/g,"");
+    console.log(str);
+  </script>
+</body>
+</html>

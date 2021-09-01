@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "谷歌浏览器",
+      "type": "chrome",
+      "request": "launch",
+      "url": "${file}",
+      "sourceMaps": true,
+      "webRoot": "${workspaceRoot}"
+    },
+    {
+      "name": "nodeLauch",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": null,
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "internalConsole",
+      "preLaunchTask": "",
+      "sourceMaps": false,
+      "outDir": null
+    }
+  ]
+}
