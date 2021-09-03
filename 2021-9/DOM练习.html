@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1 {
+      display: inline-block;
+      margin: 0 30px;
+    }
+
+    .div2 {
+      border: 1px solid black;
+      width: 300px;
+
+    }
+
+    .div3 {
+      border: 1px solid black;
+      width: 300px;
+    }
+
+    .div4 {
+      position: relative;
+      display: inline-block;
+      right: 20px;
+      width: 200px;
+
+    }
+
+    button {
+      margin: 5px;
+      padding: 0.25em;
+      width: 200px;
+      overflow: visible;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div1">
+    <div class="div2">
+      <p>你喜欢哪个城市？</p>
+      <ul>
+        <li class="bj">北京</li>
+        <li>上海</li>
+        <li>东京</li>
+        <li>首尔</li>
+      </ul>
+      <p>你喜欢哪款游戏？</p>
+      <ul>
+        <li>红警</li>
+        <li>实况</li>
+        <li>极品飞车</li>
+        <li>魔兽</li>
+      </ul>
+      <p>你手机的操作系统？</p>
+      <ul>
+        <li>IOS</li>
+        <li>Android</li>
+        <li>Windows Phone</li>
+      </ul>
+    </div>
+    <div class="div3">
+      <p>gender:<input type="radio">Male<input type="radio">Female</p>
+      <p>name:<input type="text"></p>
+    </div>
+  </div>
+  <div class="div4">
+    <button onclick="">查找#bj节点</button>
+    <button>查找所有li节点</button>
+    <button>查找name=gender节点</button>
+    <button>查找#city下所有li节点</button>
+    <button>返回#city的所有子节点</button>
+    <button>返回#phone的第一个子节点</button>
+    <button>返回#bj的父节点</button>
+    <button>返回#android的前一个兄弟节点</button>
+    <button>返回#usename的value属性值</button>
+    <button>设置#usename的value属性值</button>
+    <button>返回#bj的文本值</button>
+  </div>
+  <script>
+    const str = document.getElementsByClassName
+  </script>
+</body>
+
+</html>
