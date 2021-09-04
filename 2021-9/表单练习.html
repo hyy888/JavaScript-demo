@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Your Details:</legend>
+            <label>Name:<input type="text" name="name"></label></br>
+            <label>Email:<input type="text" name="email"></label>
+        </fieldset><br>
+        <fieldset>
+            <p>
+                <legend>Your Review:</legend>
+                <label for="sel">How did you hear about us?</label>
+                <select id="sel">
+                    <option value="Google">Google</option>
+                    <option value="Baidu">Baidu</option>
+                </select>
+            </p>
+            <p>Would you visit again?<br />
+                <label><input id="red" type="radio" name="radd" value="Yes" checked="checked">Yes</label>
+           10     <label><input id="red" type="radio" name="radd" value="No">No</label>
+                <label><input id="red" type="radio" name="radd" value="Maybe">Maybe</label>
+            </p>
+            <p><label for="text">Comments:</label><br />
+                <textarea name="text" id="text" cols="40" rows="4"></textarea>
+            </p>
+            <label><input type="checkbox" name="sign" checked="checked">Sign me up for email updates</label><br>
+            <input type="submit" name="submit" value="submit review">
+        </fieldset>
+    </form>
+</body>
+
+</html>
