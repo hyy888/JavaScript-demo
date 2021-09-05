@@ -44,8 +44,8 @@
   <div class="div1">
     <div class="div2">
       <p>你喜欢哪个城市？</p>
-      <ul>
-        <li class="bj">北京</li>
+      <ul id="city">
+        <li id="bj">北京</li>
         <li>上海</li>
         <li>东京</li>
         <li>首尔</li>
@@ -58,32 +58,145 @@
         <li>魔兽</li>
       </ul>
       <p>你手机的操作系统？</p>
-      <ul>
+      <ul id="phone">
         <li>IOS</li>
-        <li>Android</li>
+        <li id="android">Android</li>
         <li>Windows Phone</li>
       </ul>
     </div>
     <div class="div3">
-      <p>gender:<input type="radio">Male<input type="radio">Female</p>
-      <p>name:<input type="text"></p>
+      <p>gender:
+        <input type="radio" name="gender" value="Male">
+        Male
+        <input type="radio" name="gender" value="Female">
+        Female
+      </p>
+      <p>name:<input type="text" id="username" value="abcde"></p>
     </div>
   </div>
   <div class="div4">
-    <button onclick="">查找#bj节点</button>
-    <button>查找所有li节点</button>
-    <button>查找name=gender节点</button>
-    <button>查找#city下所有li节点</button>
-    <button>返回#city的所有子节点</button>
-    <button>返回#phone的第一个子节点</button>
-    <button>返回#bj的父节点</button>
-    <button>返回#android的前一个兄弟节点</button>
-    <button>返回#usename的value属性值</button>
-    <button>设置#usename的value属性值</button>
-    <button>返回#bj的文本值</button>
+    <button id="btn01">查找#bj节点</button>
+    <button id="btn02">查找所有li节点</button>
+    <button id="btn03">查找name=gender节点</button>
+    <button id="btn04">查找#city下所有li节点</button>
+    <button id="btn05">返回#city的所有子节点</button>
+    <button id="btn06">返回#phone的第一个子节点</button>
+    <button id="btn07">返回#bj的父节点</button>
+    <button id="btn08">返回#android的前一个兄弟节点</button>
+    <button id="btn09">返回#usename的value属性值</button>
+    <button id="btn10">设置#usename的value属性值</button>
+    <button id="btn11">返回#bj的文本值</button>
   </div>
   <script>
-    const str = document.getElementsByClassName
+    // 查找#bj节点
+    var btn01 = document.getElementById("btn01");
+    btn01.onclick = function () {
+      var bj = document.getElementById("bj");
+      alert(bj.innerHTML);
+    };
+
+    // 查找所有li节点
+    var btn02 = document.getElementById("btn02");
+    btn02.onclick = function () {
+      var lis = document.getElementsByTagName("li");
+      for (var i = 0; i < lis.length; i++) {
+        alert(lis[i].innerHTML);
+      }
+    };
+
+    // 查找name=gender节点
+    var btn03 = document.getElementById("btn03");
+    btn03.onclick = function () {
+      var inputs = document.getElementsByName("gender");
+      for (var i = 0; i < inputs.length; i++) {
+        // input是自结束标签，没有结束标签，所以没有HTML内部内容，innerHTML无效
+        alert(inputs[i].value);
+      }
+    };
+
+    // 查找#city下所有li节点
+    var btn04 = document.getElementById("btn04");
+    btn04.onclick = function () {
+      var city = document.getElementById("city");
+      var lis2 = city.getElementsByTagName("li");
+      for (var i = 0; i < lis2.length; i++) {
+        alert(lis2[i].innerHTML);
+      }
+    };
+
+    // 返回#city的所有子节点
+    // var btn05 = document.getElementById("btn05");
+    // btn05.onclick = function () {
+    // 使用childNodes获取子节点的时候，childNodes返回的是子节点的集合，是一个数组的格式。他会把换行和空格也当成是节点信息。
+    // 为了不显示不必须的换行的空格，我们如果要使用childNodes就必须进行必要的过滤。通过正则表达式式取掉不必要的信息。
+    //   var city2 = document.getElementById("city").childNodes;
+    //   for (var i = 0; i < city2.length; i++) {
+    //     if (city2[i].nodeName == "#city" && !/\s/.city(city2.nodeValue)) {
+    //       document.getElementById("city").removeChild(city2[i]);
+    //     }
+    //   };
+    //   for (var i = 0; i < city2.length; i++) {
+    //     console.log(i + "---------")
+    //     console.log(city2[i]);
+    //   }
+    // };
+    var btn05 = document.getElementById("btn05");
+    btn05.onclick = function () {
+      var city2 = document.getElementById("city").childNodes;
+      for (var i = 0; i < city2.length; i++) {
+        alert(city2[i].innerHTML);
+      }
+    };
+
+    // 返回#phone的第一个子节点
+    var btn06 = document.getElementById("btn06");
+    btn06.onclick = function () {
+      // firstChild来获取第一个子元素，但是在有些情况下我们打印的时候会显示undefined，这是什么情况呢？
+      // 其实firstChild和childNodes是一样的
+      // 在浏览器解析的时候会把他当换行和空格一起解析
+      // 其实你获取的是第一个子节点
+      // 只是这个子节点是一个换行或者是一个空格而已
+      // 那么不要忘记和childNodes一样处理呀
+      var phone = document.getElementById("phone").children[0];
+      alert(phone.innerHTML);
+    };
+
+    // 返回#bj的父节点
+    var btn07 = document.getElementById("btn07");
+    btn07.onclick = function () {
+      var bj2 = document.getElementById("bj").parentNode;
+      alert(bj2.innerHTML);
+    };
+
+    // 返回#android的前一个兄弟节点
+    var btn08 = document.getElementById("btn08");
+    btn08.onclick = function () {
+      var android = document.getElementById("android").previousElementSibling;
+      alert(android.innerHTML);
+    };
+
+    // 返回#usename的value属性值
+    var btn09 = document.getElementById("btn09");
+    btn09.onclick = function () {
+      var username = document.getElementById("username");
+      alert(username.value);
+    };
+
+    // 设置#usename的value属性值
+    var btn10 = document.getElementById("btn10");
+    btn10.onclick = function () {
+      var username = document.getElementById("username");
+      var username2 = username.getAttribute("value");
+      username.setAttribute("value", "666");
+      alert("value已更新");
+    };
+
+    // 返回#bj的文本值
+    var btn11 = document.getElementById("btn11");
+    btn11.onclick = function () {
+      var bj = document.getElementById("bj");
+      alert(bj.innerHTML);
+    };
   </script>
 </body>
 
