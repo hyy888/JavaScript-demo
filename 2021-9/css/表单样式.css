@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+input {
+    display: block;
+    background-color: #f2f2f2;
+    border: 1px solid #bdbdbd;
+    padding: 5px 5px 5px 30px;
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    margin-bottom: 10px;
+    font-size: 120%;
+    color: #5a5854;
+    border-radius: 5px;
+}
+input:focus, input:hover {
+    background-color: #ffffff;
+    border: 1px solid #b1e1e4;
+}
+input#email {
+    background-image: url("../images/email.png");
+}
+input#twitter {
+    background-image: url("../images/twitter.png");
+}
+input#web {
+    background-image: url("../images/web.png");
+}
