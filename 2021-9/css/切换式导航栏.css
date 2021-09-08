@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+a {
+    text-decoration: none;
+}
+p {
+    text-indent: 16px;
+    font-size: 15px;
+    color: #333333;
+}
+.center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-align {
+    display: flex;
+    align-items: center;
+}
+.center-justify {
+    display: flex;
+    justify-content: center;
+}
+.latitude-spacearound {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.latitude-spacebetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.longitude {
+    display: flex;
+    flex-direction: column;
+}
+/*基本不用*/
+.fixedwidth {
+    width: 1349px;
+    margin: 0 auto;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+/*百分比式布局栏*/
+.fluidwidth {
+    width: 100%;
+    box-sizing: border-box;
+}
+/*------------------------本网页样式表----------------------------*/
+.containerwidth {
+    width: 360px;
+    margin: 0 auto;
+}
+.xinlang-leave {
+    margin-top: 50px;
+    height: 275px;
+    /*background-color: #AAD2C7;*/
+}
+/*-----------导航部分-----------*/
+.xinlang-up {
+    height: 35px;
+    border: 1px solid #DBDEE1;
+    background-color: #F8F8F8;
+}
+.xlnav-ul {
+    background-color: gray;
+}
+.xlnav-li {
+    float: left;
+    width: 58px;
+    height: 35px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+    list-style: none;
+    margin-top: -1px;
+    border-top: 3px solid transparent;
+}
+.xinlang-a {
+    font-size: 16px;
+    color: black;
+}
+/*-----------内容部分-----------*/
+.xinlang-down {
+    height: 240px;
+    /*background-color: red;*/
+}
+.xl-box {
+    display: none;
+    width: 300px;
+    /*background-color: pink;*/
+}
+.xlcontent-img-leave {
+    height: 200px;
+    /*background-color: blue;*/
+}
+.xlcontent-img {
+    width: 100%;
+}
+.xlcontent-desc {
+    position: relative;
+    height: 50px;
+    margin-top: -55px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+}
