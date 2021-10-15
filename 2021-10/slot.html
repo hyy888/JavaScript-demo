@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <chind>
+      <h2 slot="header">标题</h2>
+      <p>正文内容</p>
+      <p>更多正文内容</p>
+      <div slot="footer">底部内容</div>
+    </chind>
+  </div>
+
+  <template id="chind">
+      <div class="container">
+        <div class="header">
+          <slot name="header"></slot>
+        </div>
+        <div class="main">
+          <slot></slot>
+        </div>
+        <div class="footer">
+          <slot name="footer"></slot>
+        </div>
+      </div>
+  </template> 
+  <script src="../vue.js"></script>
+  <script>
+    Vue.component('chind', {
+      template: '#chind',
+    })
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Word'
+      },
+      methods: {
+
+      },
+    });
+  </script>
+</body>
+
+</html>

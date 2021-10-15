@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+  .indexes {
+    color: red;
+  }
+</style>
+
+<body>
+    <div id="app">
+      <ul>
+        <li v-for="(item,index) in movies" :class="{indexes:currentIndex === index}"  @click="colores(index)">{{item}}</li>
+      </ul>
+    </div>  
+    <script src="../../vue.js"></script>
+    <script>
+        const app = new Vue({
+           el: '#app',
+           data: {
+             message: 'Hello Word',
+             currentIndex: 0,
+             movies: ['一','二','三','四']
+           },
+           methods:{
+            colores(index) {
+              this.currentIndex = index
+            }
+           }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
+
+<body>
+  <!-- 在页面没有完成加载渲染前，不让标签显示出来 -->
+    <div id="app" v-cloak>
+      {{message}}
+    </div>
+    <script src="../../vue.js"></script>
+    <script>
+      setTimeout(function() {
+        const app = new Vue({
+           el: '#app',
+           data: {
+             message: 'Hello Word'
+           },
+           methods:{
+
+           }
+        })
+      },1000)
+        
+    </script>
+</body>
+
+</html>

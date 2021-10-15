@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+      <input-number v-model="value" :max="100" :min="0"></input-number>
+    </div>
+    <template id="number">
+      <div>
+        <div class="input-number">
+          <input type="text" :value="currentValue" @change="handleChange" @keyup.down="handleDown" @keyup.up="handleUp" />
+          <!-- 这里的大于号小于号也可以用转义字符&lt;&gt; -->
+          <!-- 当disabled为true时button不能点击 -->
+          <button @click="handleDown" :disabled="currentValue <= min">-</button>
+          <button @click="handleUp" :disabled="currentValue >= max">+</button>
+          <button @click="step" :disabled="currentValue <= min">-10</button>
+          <button @click="prop" :disabled="currentValue >= max">+10</button>
+        </div>
+      </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="js/input-number.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+      <npc>
+        <!-- 将包含所有插槽 prop 的对象命名为 slotProps -->
+        <!-- <template v-slot:default="{slotProps}"> -->
+        <template v-slot:default="{user}">
+        {{user.lastName}}
+        </template>
+
+      </npc>
+    </div>
+    <template id="num">
+      <div>
+        <h1>
+          <slot :user="user">{{user.firstName}}</slot>
+        </h1>
+      </div>
+    </template>
+    <script src="../vue.js"></script>
+    <script>
+      Vue.component('npc',{
+        template: '#num',
+        data() {
+          return {
+            message: 'test',
+            user: {
+              firstName: 'aaa',
+              lastName: 'bbb'
+            }
+          };
+        },
+      })
+        const app = new Vue({
+           el: '#app',
+           data: {
+             message: 'Hello Word'
+           },
+           methods:{
+
+           }
+        });
+    </script>
+</body>
+
+</html>
